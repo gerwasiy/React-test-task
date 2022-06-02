@@ -1,0 +1,308 @@
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F8F8F8;
+}
+
+* {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+}
+
+.wrapper,
+main,
+section {
+  width: 100%;
+  height: 100%
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 0px;
+  max-width: 100%;
+
+  div {
+      display: flex;
+      align-items: center;
+      max-width: 100%;
+
+  }
+}
+
+.logo {
+  height: 100%;
+  width: 100%;
+  margin-right: 8px;
+}
+
+.card-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-content: space-between;
+  grid-gap: 29px;
+  margin: 50px 0px
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+
+  div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 380px;
+      text-align: center;
+  }
+
+  p {
+      margin: 21px 0px 32px 0px;
+  }
+}
+
+
+.homeBg {
+  background-image: url('./assests/homeBackground.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 650px;
+  max-width: 100%;
+
+}
+
+h1,
+h2 {
+  font-size: 40px;
+  text-align: center;
+  line-height: 40px;
+  margin: 0;
+  max-width: 100%;
+
+}
+
+
+.show-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+section {
+  padding-bottom: 140px;
+
+  &:last-of-type {
+      padding-bottom: 100px;
+  }
+}
+
+
+
+.registerForm {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+
+  input {
+      width: 99%;
+      border: 1px solid #D0CFCF;
+      border-radius: 4px;
+      padding: 14px 16px;
+      background-color: #F8F8F8;
+      outline: none;
+      height: 24px;
+  }
+
+  .register-inputs{
+      input {
+      margin-top: 50px;
+      margin-bottom: 4px;
+      
+      }
+  }
+
+
+  .error-text{
+      color:#CB3D40;
+      display: none
+  }
+
+  .inputs-radio {
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-self: flex-start;
+
+      div {
+          display: flex;
+          margin-bottom: 13px;
+          width: 100%;
+
+          &:first-child {
+              margin-top: 18px;
+          }
+
+          input {
+              width: 20px;
+              height: 20px;
+              margin: 0 12px 0 0;
+          }
+      }
+  }
+
+
+}
+
+.select-position {
+  margin: 25px 0px 50px;
+}
+
+.helper-text {
+  align-self: flex-start;
+  font-size: 12px;
+  color: #7E7E7E;
+}
+
+p {
+  line-height: 26px;
+  margin: 0;
+}
+
+.register-form-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upload-photo {
+  margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: 1fr 2.5fr;
+  grid-template-rows: 1fr;
+
+
+  input {
+      border-radius: 0px 4px 4px 0px;
+      border-left: none;
+
+  }
+
+  .upload-btn {
+      border: 1px solid rgba(0, 0, 0, 0.87);
+      border-radius: 4px 0px 0px 4px;
+      background-color: #F8F8F8;
+      cursor: pointer;
+      height:54px;
+      width: 100%;        
+      
+  }
+}
+
+.successfuly-registered{
+  display: none;
+  flex-direction: column;
+  align-items:center;
+  .success-image{
+      max-width: 100%;
+      margin-top: 50px;
+  }
+
+}
+
+@media(max-width:1024px) {
+  header {
+      padding: 13px 60px;
+  }
+
+  .card-box {
+      padding: 0px 60px;
+  }
+}
+
+@media(max-width:768px) {
+  header {
+      padding: 13px 32px;
+  }
+
+  .card-box {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      padding: 0px 32px;
+      grid-gap: 20px;
+  }
+}
+
+@media(max-width:360px) {
+  .wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 360px;
+  }
+
+  header {
+      justify-content: center;
+      padding: 13px 16px;
+
+  }
+
+  .home {
+      div {
+          padding: 40px 16px 32px 16px;
+          width: 90%;
+      }
+  }
+
+  .card-box {
+      display: flex;
+      flex-direction: column;
+  }
+
+  section {
+      padding: 0px 0px 140px 0px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &:last-of-type {
+          padding-bottom: 100px;
+      }
+
+  }
+
+  h2 {
+      width: 90%;
+      text-align: center;
+  }
+
+  .register-inputs {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      input {
+          padding: 14px 16px;
+          width: 84%;
+          
+      }
+  }
+
+  .upload-photo {
+      input {
+          width: 84%;
+      }
+  }
+
+}
